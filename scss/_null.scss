@@ -1,0 +1,29 @@
+// normalise
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    transition: all .1s ease-in;
+    scroll-behavior: smooth;
+}
+div {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+ul li {
+    list-style: none;
+}
