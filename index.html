@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
     <title>Document</title>
 </head>
 
@@ -15,10 +19,10 @@
             <div class="header__inner">
                 <h1 class="page__title">Bhromaon</h1>
                 <h2 class="page__subtitle">Safe Travel Anywhere</h2>
-                <form class="search-form" action="#">
-                    <input class="search-form__input" type="search" placeholder="Search Your Travel Destination" name=""
-                        id="">
-                    <input class="search-form__btn" type="button" value="Search">
+                <form class="search-form" action="#" method="GET">
+                    <input class="search-form__input" type="search" placeholder="Search Your Travel Destination"
+                        name="search-text" id="search-text">
+                    <input class="search-form__btn" type="submit" value="Search">
                 </form>
                 <a class="scroll-down" href="#top-nav">
                     <span class="scroll-down__text">
@@ -49,7 +53,7 @@
 
                 <div class="nav">
                     <ul class="nav__items">
-                        <li class="nav__item-li"><a href="#" class="nav__item-link">Who We Are</a></li>
+                        <li class="nav__item-li"><a href="#why-section" class="nav__item-link">Who We Are</a></li>
                         <li class="nav__item-li"><a href="#" class="nav__item-link">What We Do</a></li>
                         <li class="nav__item-li"><a href="#" class="nav__item-link">Travel With Us</a></li>
                         <li class="nav__item-li"><a href="#" class="nav__item-link">Contact Us</a></li>
@@ -59,7 +63,7 @@
         </div>
     </nav>
     <main>
-        <div class="section why-section">
+        <div class="section why-section" id="why-section">
             <div class="wrapper">
                 <div class="why-section__inner">
                     <div class="why-section__left">
@@ -75,8 +79,18 @@
                         <button class="why-section__btn">Explore Places </button>
                     </div>
                     <div class="why-section__right">
-                        <img src="./img/why-section-pic1.png" alt="" srcset="">
-                        <img src="./img/why-section-pic2.png" alt="" srcset="">
+                        <img alt="picture 1" srcset="./img/why-section-pic1.png 320w,
+                        ./img/why-section-pic1.png 480w,
+                        ./img/why-section-pic1.png 800w" sizes="(max-width: 320px) 280px,
+                        (max-width: 480px) 440px,
+                        800px" src="./img/why-section-pic1.png">
+
+                        <img alt="picture 1" srcset="./img/why-section-pic2.png 320w,
+                        ./img/why-section-pic2.png 480w,
+                        ./img/why-section-pic2.png 800w" sizes="(max-width: 320px) 280px,
+                        (max-width: 480px) 440px,
+                        800px" src="./img/why-section-pic2.png">
+
                     </div>
                 </div>
             </div>
@@ -86,9 +100,28 @@
         <div class="section 2-ap-section"></div>
         <div class="section what-section"></div>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__inner">
+                <div>
+                    <a href="#" class="logo footer__logo">
+                        Bhromaon
+                    </a>
+                    <p class="footer__slogan">
+                        Safe Travel Anywhere
+                    </p>
+                    <div class="soc footer__soc">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fab--active fa-linkedin-in"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-pinterest"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="https://kit.fontawesome.com/656bab5846.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
