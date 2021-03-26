@@ -109,7 +109,6 @@ html {
   justify-content: space-between;
 }
 .search-form__input {
-  /* box-sizing: content-box; */
   height: 100%;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -118,9 +117,9 @@ html {
   font-size: 1.4rem;
   text-align: center;
   padding: 0 2rem;
-  /*  */
 }
 .search-form__btn {
+  position: relative;
   height: 100%;
   width: 15rem;
   border: 2px #ffffff solid;
@@ -129,7 +128,13 @@ html {
   font-family: "Aleo", serif;
   text-transform: uppercase;
   background-color: #5474FD;
+  vertical-align: middle;
   cursor: pointer;
+}
+.search-form__btn i {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  transform: translateX(1rem);
 }
 .search-form__btn:hover, .search-form__btn:focus {
   /* color: $blue-color;
@@ -185,7 +190,6 @@ html {
 .logo {
   font-size: 2.4rem;
   font-family: "Josefin Sans", sans-serif;
-  /*     letter-spacing: 1.2; */
   text-transform: uppercase;
 }
 
