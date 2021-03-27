@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&family=Josefin+Sans:wght@200;300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -82,6 +83,7 @@ html {
 }
 .page__title {
   font-size: 4.8rem;
+  font-weight: 400;
   letter-spacing: 0.1em;
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
@@ -89,6 +91,7 @@ html {
 }
 .page__subtitle {
   font-size: 1.6rem;
+  font-weight: 300;
   letter-spacing: 0.55em;
   font-family: "Josefin Sans", sans-serif;
   margin-bottom: 5rem;
@@ -139,9 +142,6 @@ html {
   transform: translateX(1rem);
 }
 .search-form__btn:hover, .search-form__btn:focus {
-  /* color: $blue-color;
-  background-color: $white-color;
-  border: 4px $blue-color solid; */
   background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
   background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
   background: linear-gradient(135deg, #5474FD, #5474FD 60%, #e8e8e8);
@@ -167,6 +167,8 @@ html {
 }
 .scroll-down__text {
   font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
 }
@@ -340,11 +342,14 @@ html {
 .why-section__title {
   font-family: "Aleo", serif;
   font-size: 3.6rem;
+  font-weight: 400;
   margin-bottom: 6.2rem;
 }
 .why-section__text {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 2.6rem;
   color: #e8e8e8;
   margin-bottom: 4.7rem;
 }
@@ -425,12 +430,14 @@ html {
   color: #e8e8e8;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
+  font-weight: 300;
   margin-bottom: 3rem;
 }
 .ap-1-section__article-title, .ap-2-section__article-title {
   color: #fefefe;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
+  font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 2.9rem;
 }
@@ -438,6 +445,8 @@ html {
   color: #e8e8e8;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 2.6rem;
   text-align: justify;
   margin-bottom: 4.7rem;
 }
@@ -468,6 +477,7 @@ html {
 .what-section__title {
   font-family: "Aleo", serif;
   font-size: 3.6rem;
+  font-weight: 400;
   margin-bottom: 9.3rem;
 }
 .what-section__article {
@@ -496,30 +506,39 @@ html {
   /* height: 28.4rem; */
 }
 .what-section__content {
-  padding: 5rem 5.4rem 4.8rem 6rem;
+  padding: 4.8rem 5.4rem 4.8rem 5.8rem;
   background-color: #333333;
   width: 60%;
+  overflow-x: scroll;
 }
 .what-section__article-title {
   color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
+  font-weight: 300;
   margin-bottom: 3.4rem;
+  text-transform: uppercase;
 }
 .what-section__article-text {
   color: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 2.6rem;
   text-align: justify;
+}
+.what-section__article-text--initial {
+  color: #5474FD;
+  font-size: 2.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  transform: translateY(-1.5rem);
+  margin-right: 6px;
 }
 
 .footer {
   height: 27rem;
   background-color: #232323;
   padding-bottom: 5.4rem;
-}
-.footer__logo {
-  margin-bottom: 1.5rem;
 }
 .footer__inner {
   height: 100%;
@@ -539,7 +558,8 @@ html {
   align-items: center;
 }
 .footer__logo {
-  display: inline-block;
+  display: block;
+  text-align: center;
   width: 100%;
   margin-bottom: 1.5rem;
   letter-spacing: 1.8px;
@@ -549,7 +569,9 @@ html {
 }
 .footer__slogan {
   font-size: 1.6rem;
+  font-weight: 300;
   font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.1rem;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -666,6 +688,26 @@ html {
     max-width: -moz-fit-content;
     max-width: fit-content;
   }
+
+  .what-section__article {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .what-section__photo {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+
+  .what-section__content {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   html {
@@ -689,26 +731,6 @@ html {
 
   .what-section__inner {
     padding: 10rem 0 10rem;
-  }
-
-  .what-section__article {
-    height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-
-  .what-section__photo {
-    width: 100%;
-    margin-bottom: 1.6rem;
-  }
-
-  .what-section__content {
-    width: 100%;
   }
 
   .why-section__btn {
