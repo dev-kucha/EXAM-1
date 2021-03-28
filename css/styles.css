@@ -144,6 +144,7 @@ html {
 .search-form__btn:hover, .search-form__btn:focus {
   background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
   background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
+  background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
   background: linear-gradient(135deg, #5474FD, #5474FD 60%, #e8e8e8);
 }
 
@@ -399,30 +400,27 @@ html {
 .how-it-works-section__inner {
   height: 100%;
 }
-.how-it-works-section__inner svg {
-  width: 160px;
-}
-.how-it-works-section__inner svg path {
-  fill: none;
-  stroke-dasharray: 2, 10;
-  /*adjust this to control the number of dots*/
-  stroke-width: 2px;
-}
 .how-it-works-section__item-box {
   position: relative;
 }
 .how-it-works-section__items {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
 }
 .how-it-works-section__shape_1 {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
+  left: 10%;
+  top: -10rem;
+  width: 80%;
   height: 200px;
   z-index: 1;
   background-image: url(../img/dots-line.svg);
@@ -430,13 +428,22 @@ html {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.how-it-works-section__item {
+  z-index: 4;
+}
 .how-it-works-section__img {
   height: 9.7rem;
   width: 9.7rem;
   margin: 1.5rem auto;
   background-image: url(../img/ellipse.svg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .how-it-works-section__text {
@@ -563,7 +570,7 @@ html {
   padding: 4.8rem 5.4rem 4.8rem 5.8rem;
   background-color: #333333;
   width: 60%;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .what-section__article-title {
   color: #ffffff;
@@ -585,6 +592,8 @@ html {
   color: #5474FD;
   font-size: 2.8rem;
   font-family: "Josefin Sans", sans-serif;
+  -webkit-transform: translateY(-1.5rem);
+  -ms-transform: translateY(-1.5rem);
   transform: translateY(-1.5rem);
   margin-right: 6px;
 }
@@ -751,7 +760,13 @@ html {
     height: auto;
     padding: 9rem 0;
   }
+  .how-it-works-section__shape_1 {
+    display: none;
+  }
   .how-it-works-section__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .how-it-works-section__item {
