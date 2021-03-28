@@ -399,14 +399,36 @@ html {
 .how-it-works-section__inner {
   height: 100%;
 }
+.how-it-works-section__inner svg {
+  width: 160px;
+}
+.how-it-works-section__inner svg path {
+  fill: none;
+  stroke-dasharray: 2, 10;
+  /*adjust this to control the number of dots*/
+  stroke-width: 2px;
+}
+.how-it-works-section__item-box {
+  position: relative;
+}
 .how-it-works-section__items {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
-.how-it-works-section__item {
-  /*         width: 24rem;
-          margin: 0 8rem; */
+.how-it-works-section__shape_1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  background-image: url(../img/dots-line.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .how-it-works-section__img {
   height: 9.7rem;
@@ -786,5 +808,10 @@ html {
 
   .why-section__right :nth-child(n) {
     max-width: 100%;
+  }
+}
+@media screen and (max-height: 640px) and (orientation: landscape) {
+  .scroll-down {
+    display: none;
   }
 }
