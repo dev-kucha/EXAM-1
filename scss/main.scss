@@ -116,6 +116,7 @@ html {
         &:hover , &:focus {
             background: -o-linear-gradient(315deg, $blue-color, $blue-color 60%, $darkwhite-color) ;
             background: -o-linear-gradient(315deg, $blue-color, $blue-color 60%, $darkwhite-color) ;
+            background: -o-linear-gradient(315deg, $blue-color, $blue-color 60%, $darkwhite-color) ;
             background: linear-gradient(135deg, $blue-color, $blue-color 60%, $darkwhite-color) ;
 
         }
@@ -395,15 +396,39 @@ html {
         height: 100%;
     }
 
+    &__item-box {
+        position: relative;
+    }
+    
     &__items {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        z-index: 4;
+    }
+
+    &__shape_1 {
+        position: absolute;
+        left: 10%;
+        top: -10rem;
+        width: 80%;
+        height: 200px;
+        z-index: 1;
+        background-image: url(../img/dots-line.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     &__item {
-/*         width: 24rem;
-        margin: 0 8rem; */
+        z-index: 4;
     }
 
     &__img {
@@ -411,9 +436,15 @@ html {
         width: 9.7rem;
         margin: 1.5rem auto;
         background-image: url(../img/ellipse.svg);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     &__text {
@@ -579,7 +610,9 @@ html {
             color: $blue-color;
             font-size: 2.8rem;
             font-family: $main-font;
-            transform: translateY(-1.5rem);
+            -webkit-transform: translateY(-1.5rem);
+                -ms-transform: translateY(-1.5rem);
+                    transform: translateY(-1.5rem);
             margin-right: 6px;
         }
     }
@@ -769,8 +802,15 @@ html {
         height: auto;
         padding: 9rem 0;
 
+        &__shape_1 {
+            display: none;
+        }
+
         &__items {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
 
         &__item { 
@@ -810,7 +850,7 @@ html {
         height: 50px;
     }
 
-    .ap-1-section__inner, .ap-2-section__inner {
+        .ap-1-section__inner, .ap-2-section__inner {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
