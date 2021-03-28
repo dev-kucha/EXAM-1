@@ -541,7 +541,7 @@ html {
   padding: 4.8rem 5.4rem 4.8rem 5.8rem;
   background-color: #333333;
   width: 60%;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .what-section__article-title {
   color: #ffffff;
@@ -786,5 +786,10 @@ html {
 
   .why-section__right :nth-child(n) {
     max-width: 100%;
+  }
+}
+@media screen and (max-height: 640px) and (orientation: landscape) {
+  .scroll-down {
+    display: none;
   }
 }
