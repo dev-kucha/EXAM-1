@@ -145,6 +145,7 @@ html {
   background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
   background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
   background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
+  background: -o-linear-gradient(315deg, #5474FD, #5474FD 60%, #e8e8e8);
   background: linear-gradient(135deg, #5474FD, #5474FD 60%, #e8e8e8);
 }
 
@@ -542,29 +543,22 @@ html {
   margin-bottom: 9.3rem;
 }
 .what-section__article {
-  height: 28.4rem;
-  /* height: auto; */
+  height: 28.6rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-}
-.what-section__photo {
-  /* background-image: url(../img/photo-what-section.png);
+  background-image: url(../img/photo-what-section.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
-  width: 40%;
-  height: 100%;
-  text-align: center;
-  /* flex-basis: 44.5rem; */
-  /* height: 28.4rem; */
+  background-size: auto;
+  background-position: left;
 }
 .what-section__content {
   padding: 4.8rem 5.4rem 4.8rem 5.8rem;
@@ -774,7 +768,9 @@ html {
   }
 
   .what-section__article {
-    height: auto;
+    height: 56rem;
+    background-position: right 35% bottom 80%;
+    background-size: contain;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -782,11 +778,6 @@ html {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-  }
-
-  .what-section__photo {
-    width: 100%;
-    margin-bottom: 1.6rem;
   }
 
   .what-section__content {
@@ -815,6 +806,11 @@ html {
 
   .what-section__inner {
     padding: 10rem 0 10rem;
+  }
+
+  .what-section__article {
+    height: 70rem;
+    background-position: right 35% top 10%;
   }
 
   .why-section__btn {
